@@ -1,9 +1,7 @@
 version: '3'
 services:
   jitsimeet:
-    build:
-      context: ./build/
-      dockerfile: jitsimeet.docker
+    build: .
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - /home/user/.Xauthority:/home/user/.Xauthority
