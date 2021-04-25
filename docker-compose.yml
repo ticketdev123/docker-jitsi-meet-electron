@@ -1,0 +1,14 @@
+version: '3'
+services:
+  jitsimeet:
+    build:
+      context: ./build/
+      dockerfile: jitsimeet.docker
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /home/user/.Xauthority:/home/user/.Xauthority
+      - /run/user/1000/pulse:/run/user/1000/pulse
+    restart: always
+    environment:
+      - DISPLAY=unix:0
+      - PULSE_SERVER=unix:/run/user/1000/pulse/native
