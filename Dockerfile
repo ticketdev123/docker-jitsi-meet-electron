@@ -51,4 +51,4 @@ USER user
 ENV QT_XKB_CONFIG_ROOT=/usr/share/X11/xkb
 
 # Autorun Jitsi Meet
-CMD /opt/Jitsi\ Meet/jitsi-meet.bin --no-sandbox
+CMD /opt/Jitsi\ Meet/jitsi-meet.bin --no-sandbox --disable-dev-shm-usage
